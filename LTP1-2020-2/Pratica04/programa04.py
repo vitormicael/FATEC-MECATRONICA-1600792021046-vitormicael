@@ -1,6 +1,7 @@
-numero=int(input('Informe um número: '))
-resto=numero%2
-if resto==0:
-  print(numero, 'é par')
+#se o numero é impar ou par
+numero = int(input('Informe um número:'))
+resto = numero % 2
+if resto == 0:
+  print('O número é par')
 else:
-  print('é impar')
+  print('O número é impar')

@@ -20,3 +20,5 @@ elif mouse == 'Sim' and teclado == 'Não' and monitor == 'Não':
   print('Quase normal')
 elif mouse == 'Não' and teclado == 'Não' and monitor == 'Não':
   print('-50fps')
+else:
+  print('Sem classificação')

@@ -18,5 +18,5 @@ elif mouse == 'Não' and teclado == 'Sim' and monitor == 'Não':
   print('Noia')
 elif mouse == 'Sim' and teclado == 'Não' and monitor == 'Não':
   print('Quase normal')
-else:
+elif mouse == 'Não' and teclado == 'Não' and monitor == 'Não':
   print('-50fps')

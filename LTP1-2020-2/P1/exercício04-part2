@@ -1,0 +1,17 @@
+
+#V_out: Tensão de Saída
+#T_ON: Tempo em nível alto
+#T: Período total do sinal
+#V_ON: Tensão em nível alto
+#V_out = T_ON / T * V_ON
+resposta = 'Sim'
+sim = True
+while resposta == 'Sim':
+  t_on=float(input('Informe o Tempo em nível alto em milissegundos: '))
+  t=float(input('Informe o período total do sinal em milissegundos: '))
+  v_on=float(input('Informe a tensão em Nível alto (V): '))
+  resultado = t_on / (t * v_on)
+  print('A Tensão de saída é', resultado)
+  resposta = input('Deseja informar outro valor?')
+  if resposta == 'Sim':
+    True

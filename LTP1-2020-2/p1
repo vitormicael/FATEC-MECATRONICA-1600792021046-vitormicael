@@ -1,0 +1,8 @@
+v_ton=float(input('Informe o Tempo em nível alto em milissegundos: '))
+t_on=float(input('Informe a Tensão em nível alto em Volts: '))
+t=float(input('Informe o Período total do sinal em milissegundos: '))
+resultado = t_on / (t * t_on)
+print('O valor total de saída é', resultado)
+if input('Deseja informar outros valores? '):
+  resposta = "Sim"
+  while = True

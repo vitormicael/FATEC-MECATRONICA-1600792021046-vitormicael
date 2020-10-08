@@ -18,7 +18,7 @@ void loop()
 {
   if(digitalRead(BOTAO_1) == HIGH){
     digitalWrite(LED_VERMELHO, HIGH);
-  } else if(digitalRead(BOTAO_2) == LOW){
+  } else if(digitalRead(BOTAO_2) == HIGH){
     digitalWrite(LED_VERMELHO, LOW);
   }
 }

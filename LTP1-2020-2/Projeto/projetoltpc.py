@@ -1,3 +1,6 @@
+
+import random
+
 senha_id1 = '2468'
 senha_id2 = '123456'
 senha_id3 = '1234'
@@ -16,5 +19,7 @@ if senha == senha_id1:
     print('ID pagador:', usuario)
     print('ID recebdor:', recebedor)
     print('Valor da transação R$',valor_pagamento)
+    print("sua chave de segurança é:"),print(random.randrange(1000, 9999))
+    print(email)
 else:
   print('Senha incorreta')

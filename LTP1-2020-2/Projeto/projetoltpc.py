@@ -16,9 +16,9 @@ if senha == senha_id1:
   valor_pagamento = float(input('Informe o valor a ser pago: '))
   if saldo_ID1 > valor_pagamento:
     pagamento = (saldo_ID1-valor_pagamento)
-    print('Transação realizada com sucesso!! Seu saldo atual é de R$', pagamento)
-    print('ID pagador:', usuario)
-    print('ID recebdor:', recebedor)
+    print('Transação realizada com sucesso')
+    print('Transação realizada por:', usuario)
+    print('Transação realizada para:', recebedor)
     print('Valor da transação R$',valor_pagamento)
     print("sua chave de segurança é:"),print(random.randrange(1000, 9999))
     print(email)

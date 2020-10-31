@@ -9,8 +9,9 @@ senha = input('Informe a sua senha: ')
 email = input('Informe o seu e-mail: ')
 if senha == senha_id1:
   recebdor = input('Informe o ID recebedor do pagamento: ')
-  if saldo_ID1 > saldo_ID2:
-    pagamento = (saldo_ID1-saldo_ID2)
+  valor_pagamento = float(input('Informe o valor ser pago: '))
+  if saldo_ID1 > valor_pagamento:
+    pagamento = (saldo_ID1-valor_pagamento)
     print('Transação realizada com sucesso!! Seu saldo atual é de', pagamento)
 else:
   print('Senha incorreta')

@@ -12,6 +12,7 @@ senha = input('Informe a sua senha: ')
 email = input('Informe o seu e-mail: ')
 if senha == senha_id1:
   recebedor = input('Informe o ID recebedor do pagamento: ')
+  print('Seu saldo atual é de R$',saldo_ID1)
   valor_pagamento = float(input('Informe o valor a ser pago: '))
   if saldo_ID1 > valor_pagamento:
     pagamento = (saldo_ID1-valor_pagamento)

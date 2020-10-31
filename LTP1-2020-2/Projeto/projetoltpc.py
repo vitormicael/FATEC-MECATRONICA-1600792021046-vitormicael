@@ -8,10 +8,13 @@ usuario = input('Informe o seu ID: ')
 senha = input('Informe a sua senha: ')
 email = input('Informe o seu e-mail: ')
 if senha == senha_id1:
-  recebdor = input('Informe o ID recebedor do pagamento: ')
-  valor_pagamento = float(input('Informe o valor ser pago: '))
+  recebedor = input('Informe o ID recebedor do pagamento: ')
+  valor_pagamento = float(input('Informe o valor a ser pago: '))
   if saldo_ID1 > valor_pagamento:
     pagamento = (saldo_ID1-valor_pagamento)
-    print('Transação realizada com sucesso!! Seu saldo atual é de', pagamento)
+    print('Transação realizada com sucesso!! Seu saldo atual é de R$', pagamento)
+    print('ID pagador:', usuario)
+    print('ID recebdor:', recebedor)
+    print('Valor da transação R$',valor_pagamento)
 else:
   print('Senha incorreta')

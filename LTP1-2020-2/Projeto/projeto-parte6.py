@@ -34,4 +34,5 @@ while resposta == 'Sim':
       recebedor = input('Informe o ID recebedor do pagamento: ')
       if recebedor == 'id1':
         print('Seu saldo atual é de R$', saldo_ID3)
+        valor_pagamento = float(input('Informe o valor a ser pago'))
    

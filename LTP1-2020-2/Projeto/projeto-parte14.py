@@ -52,7 +52,7 @@ while resposta == 'Sim':
     resposta1 = input('Deseja repetir a operação? (sim ou não) ')
   while resposta2 == 'sim':
     print('Ana gera uma operação de recebimento de R$ 250.00 para o Paulo')
-    usuario = input('Informe o seu nome de Usuário')
+    usuario = input('Informe o seu nome de Usuário: ')
     senha = input('Informe a sua senha: ')
     email = input('Informe o seu e-mail: ')
     if usuario == 'Paulo' and senha == senha_ID3:

@@ -11,6 +11,7 @@ resposta = 'Sim'
 resposta1 = 'sim'
 resposta2 = 'sim'
 resposta3 = 'sim'
+resposta4 = 'sim'
 ID1 = senha_ID1
 ID2 = senha_ID2
 ID3 = senha_ID3
@@ -121,35 +122,38 @@ while resposta == 'Sim':
     if usuario != 'ID3' or 'Paulo':
       print('Usuário incorreta')
       resposta3 = input('Deseja repetir a operação? (sim ou não) ')
-  print('ID2 gera uma operação de recebimento de R$ 1000.00 para o ID3')
-  usuario = input('Informe o seu ID: ')
-  senha = input('Informe a sua senha: ')
-  email = input('Informe o seu e-mail: ')
-  if usuario == 'ID3' or 'Paulo':
-    if senha == senha_ID3:
-      print('Seu saldo atual é de R$', saldo_atualID3)
-      recebedor = input('Informe o ID recebedor do pagamento: ')
-      if recebedor == 'ID2' or 'Rodrigo':
-        valor_pagamento = float(input('Informe o valor da transação: '))
-        if saldo_atualID3 >= valor_pagamento:
-          pagamento = (saldo_atualID3 - valor_pagamento)
-          saldo_atualID3 = (saldo_atualID3 - valor_pagamento)
-          saldo_atualID2 = (saldo_atualID2 + valor_pagamento)
-          print('Transação realizada com sucesso')
-          print('Transação realizada por:', usuario)
-          print('Transação realizada para:', recebedor)
-          print('Valor da transação R$',valor_pagamento)
-          print("sua chave de segurança é:"),print(random.randrange(1000, 9999))
-          print(email)
-          print(saldo_atualID1)
-          print(saldo_atualID2)
-          print(saldo_atualID3)          
-        elif saldo_atualID3 < valor_pagamento:
-          print('Você não tem saldo o suficiente para realizar a transação')
-          saldo_atualID3 = saldo_atualID3
-          saldo_atualID2 = saldo_atualID2
-  elif senha != senha_ID3 or usuario != 'ID3':
-    print('Usuário ou Senha incorreta')
-    resposta = input('Deseja tentar novamente? (Sim ou Não')
-  resposta = input('Deseja realizar outra transação? (Sim ou Não) ')
+  while resposta4 == 'sim':
+    print('ID2 gera uma operação de recebimento de R$ 1000.00 para o ID3')
+    usuario = input('Informe o seu ID: ')
+    senha = input('Informe a sua senha: ')
+    email = input('Informe o seu e-mail: ')
+    if usuario == 'ID3' or 'Paulo':
+      if senha == senha_ID3:
+        print('Seu saldo atual é de R$', saldo_atualID3)
+        recebedor = input('Informe o ID recebedor do pagamento: ')
+        if recebedor == 'ID2' or 'Rodrigo':
+          valor_pagamento = float(input('Informe o valor da transação: '))
+          if saldo_atualID3 >= valor_pagamento:
+            pagamento = (saldo_atualID3 - valor_pagamento)
+            saldo_atualID3 = (saldo_atualID3 - valor_pagamento)
+            saldo_atualID2 = (saldo_atualID2 + valor_pagamento)
+            print('Transação realizada com sucesso')
+            print('Transação realizada por:', usuario)
+            print('Transação realizada para:', recebedor)
+            print('Valor da transação R$',valor_pagamento)
+            print("sua chave de segurança é:"),print(random.randrange(1000, 9999))
+            print(email)
+            print(saldo_atualID1)
+            print(saldo_atualID2)
+            print(saldo_atualID3)          
+          elif saldo_atualID3 < valor_pagamento:
+            print('Você não tem saldo o suficiente para realizar a transação')
+            saldo_atualID3 = saldo_atualID3
+            saldo_atualID2 = saldo_atualID2
+      if senha != senha_ID3:
+        print('Senha incorreta')
+    if usuario != 'ID3' or 'Paulo':
+      print('Usuário incorreta')
+      resposta4 = input('Deseja repetir a operação? (sim ou não) ')
+  resposta = ('Deseja repetir as operações? (Sim ou Não)')
 print('Fim do programa')

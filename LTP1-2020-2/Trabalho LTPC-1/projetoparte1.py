@@ -22,7 +22,7 @@ while resposta == 'Sim':
     print('Faça login com a conta de Rodrigo e faça a transação para Ana')
     print('ID1 é a usuária Ana')
     print('ID2 é o usuário Rodrigo')
-    print('ID3 é o usuário Paulo'
+    print('ID3 é o usuário Paulo')
     usuario = input('Informe o seu nome de Usuário: ')
     senha = input('Informe a sua senha: ')
     email = input('Informe o seu e-mail: ')
@@ -48,9 +48,6 @@ while resposta == 'Sim':
              print('Você não tem saldo o suficiente para realizar a transação')
              saldo_atualID1 = saldo_atualID1
              saldo_atualID2 = saldo_atualID2
-             print(f'Saldo atual de Ana é de R${saldo_atualID1: .2f}')
-             print(f'Saldo atual de Rodrigo é de R${saldo_atualID2: .2f}')
-             print(f'Saldo atual de Paulo é de R${saldo_atualID3: .2f}')
     else:
         print('Usuário ou Senha incorreto')
     resposta1 = input('Deseja repetir a operação? (sim ou não) ')
@@ -65,7 +62,7 @@ while resposta == 'Sim':
     email = input('Informe o seu e-mail: ')
     if usuario == 'Paulo' and senha == senha_ID3:
       if senha == senha_ID3:
-        print(f'Seu saldo atual é de R${saldo_atualID3: .2f}')
+        print('Seu saldo atual é de R$', saldo_atualID3)
         recebedor = input('Informe o nome do recebedor do pagamento: ')
         if recebedor == 'Ana':
           valor_pagamento = float(input('Informe o valor da transação: '))
@@ -86,9 +83,6 @@ while resposta == 'Sim':
             print('Você não tem saldo o suficiente para realizar a transação')
             saldo_atualID3 = saldo_atualID3
             saldo_atualID1 = saldo_atualID1
-            print(f'Saldo atual de Ana é de R${saldo_atualID1: .2f}')
-            print(f'Saldo atual de Rodrigo é de R${saldo_atualID2: .2f}')
-            print(f'Saldo atual de Paulo é de R${saldo_atualID3: .2f}')
     else:
         print('Usuário ou Senha incorreto')
     resposta2 = input('Deseja repetir a operação? (sim ou não) ')
@@ -123,9 +117,9 @@ while resposta == 'Sim':
             print('Você não tem saldo o suficiente para realizar a transação')
             saldo_atualID1 = saldo_atualID1
             saldo_atualID2 = saldo_atualID2
-            print(f'Saldo atual de Ana é de R${saldo_atualID1: .2f}')
-            print(f'Saldo atual de Rodrigo é de R${saldo_atualID2: .2f}')
-            print(f'Saldo atual de Paulo é de R${saldo_atualID3: .2f}')
+            print(saldo_atualID1)
+            print(saldo_atualID2)
+            print(saldo_atualID3)
     else:
         print('Usuário ou Senha incorreto')
     resposta3 = input('Deseja repetir a operação? (sim ou não) ')
@@ -139,7 +133,7 @@ while resposta == 'Sim':
     senha = input('Informe a sua senha: ')
     email = input('Informe o seu e-mail: ')
     if usuario == 'Paulo' and senha == senha_ID3:
-        print(f'Seu saldo atual é de R${saldo_atualID3: .2f}')
+        print('Seu saldo atual é de R$', saldo_atualID3)
         recebedor = input('Informe o nome do recebedor do pagamento: ')
         if recebedor == 'Rodrigo':
           valor_pagamento = float(input('Informe o valor da transação: '))
@@ -160,12 +154,8 @@ while resposta == 'Sim':
             print('Você não tem saldo o suficiente para realizar a transação')
             saldo_atualID3 = saldo_atualID3
             saldo_atualID2 = saldo_atualID2
-            print(f'Saldo atual de Ana é de R${saldo_atualID1: .2f}')
-            print(f'Saldo atual de Rodrigo é de R${saldo_atualID2: .2f}')
-            print(f'Saldo atual de Paulo é de R${saldo_atualID3: .2f}')
     else:
         print('Usuário ou Senha incorreto')
     resposta4 = input('Deseja repetir a operação? (sim ou não) ')
-   if resposta4 == 'não':
-     resposta = input('Deseja repetir as operações? (Sim ou Não)')
+resposta = ('Deseja repetir as operações? (Sim ou Não)')
 print('Fim do programa')

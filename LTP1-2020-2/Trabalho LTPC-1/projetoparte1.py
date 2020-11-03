@@ -166,6 +166,6 @@ while resposta == 'Sim':
     else:
         print('Usuário ou Senha incorreto')
     resposta4 = input('Deseja repetir a operação? (sim ou não) ')
-if resposta4 == 'não':
-  resposta = input('Deseja repetir as operações? (Sim ou Não)')
+   if resposta4 == 'não':
+     resposta = input('Deseja repetir as operações? (Sim ou Não)')
 print('Fim do programa')

@@ -1,0 +1,5 @@
+dados = 'Jiraya;8.9'
+nome, nota = dados.split(';')
+nome = nome.upper()
+nota = float(nota)
+saida = 'A nota informada para {} foi de: {}'.format(nome, nota)

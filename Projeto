@@ -1,0 +1,97 @@
+
+import random
+import string
+
+import cherrypy
+
+
+class StringGenerator(object):
+    @cherrypy.expose
+    def index(self):
+        return """
+            <!DOCTYPE html>
+            <html>
+              <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+                <title>ProjetoO</title>
+                <link rel="sortcut icon" href="http://www.fatecsantoandre.edu.br/images/logo.png" type="image/png"/>
+          </head>
+          <body>
+    <header>
+        <div class="navbar-fixed"> 
+            <nav class="navbar z-depth-0">
+                <div class="nav-wrapper container">
+                    <a href="#"><img class="logo_img" src="http://www.fatecsantoandre.edu.br/images/logo.png"></a>
+                    <ul class="right light hide-on-med-and-down">
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+
+                    <a href="#" data-target="slide-out" class="sidenav-trigger right">
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+                   
+          <h1 class="title">
+              Trabalho LTPC
+          </h1>
+            <form method="get" action="generate">
+              <input class="input" type="text" placeholder="Informe o seu usuário" name="idd"><br><br>
+             <input class="input" type="text" placeholder="Informe a sua senha" name="password"><br><br>
+              <button type="submit">ENTRAR</button>
+              <a href="https://github.com/vitormicael/FATEC-MECATRONICA-1600792021046-vitormicael/blob/master/projeto-ltpc-2" class="button">Código fonte</a>
+            </form>
+          </body>
+          </div>
+          </div>
+          <!--SOBRE-->
+    <section class="sobre bloco" id="sobre">
+        <div class="row container">
+            <div class="col s12">
+                <h2 class='white-text light'>Sobre Nós</h2>
+
+            </div>
+            <div class="col s12 l6">
+                <p class='white-text light'><b>Nosso projeto foi desenvolvido para facilitar a vida de algumas pessoas(idosos)que convivem com o Alzheimer diariamente.Decidimos desenvolver um projeto simples, mas que pode ajudar em diversos aspectos.Se trata doacionamento de LEDs e LCD, possibilitando o entendimento de quando a pessoa deve tomar os seus remédios no horário correto.Esse site esta sendo Utilizado como uma platafora de testes para o nosso projeto.
+                </b>
+                </p>
+            </div>
+
+            </div>
+        </div>
+       </section>
+          
+          <!-- RODAPÉ -->
+          <footer class="rodape">
+             <div class="row container center">
+                <p class="light white-text"><b>Trabalho LTPC 2021 - © Todos os direitos reservados</b></p>
+             </div>
+        </html>"""
+
+    @cherrypy.expose
+    def generate(self, idd, password):
+     usuario_1 = 'Vmicael'
+     usuario_2 = 'Rchicarelli'
+     usuario_3 = 'Mzanini'
+     senha_1 = '12345'
+     senha_2 = '1234'
+     senha_3 = '123'
+     if idd == usuario_1 and senha_1 == password or idd == usuario_2 and password == senha_2 or idd == usuario_3 and senha_3 == password:
+         print('Acesso permitido')
+     if idd == usuario_1 and senha_1 == password:
+       out = '° Tome o seu remédio vermelho as 09:00 e o seu remédio verde às 11:20. Você tem consulta no dia 12/02/2021 às 14:00 na R. São João, nº 213'
+
+     elif idd == usuario_2 and senha_2 == password:
+       out = '° Tome o seu remédio vermelho as 09:55 e o seu remédio verde às 14:30. Você tem consulta no dia 11/12/2021 às 14:50 na R. São João, nº 514'
+     elif idd == usuario_3 and senha_3 == password:
+        out = '° Tome o seu remédio vermelho as 15:30 e o seu remédio verde às 17:00. Você tem consulta no dia 03/06/2021 às 09:15 na R. São João, nº 115'
+     else:
+        out = 'Usuário ou Senha incorreto'
+     return '%s (<a href="./">back</a>)' % out
+
+if __name__ == '__main__':
+    cherrypy.quickstart(StringGenerator())
